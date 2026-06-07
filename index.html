@@ -1,59 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamescope Helper</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'JetBrains Mono', monospace;
-            background: radial-gradient(circle at center, #0f172a 0%, #05070c 100%);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gamescope Helper</title>
+
+<style>
+:root{
+    --bg:#0f1115;
+    --card:#171a21;
+    --text:#ffffff;
+    --text-secondary:#9ca3af;
+    --green:#22c55e;
+    --green-hover:#16a34a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:24px;
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+    text-align:center;
+}
+
+.logo{
+    width:140px;
+    height:140px;
+    border-radius:32px;
+    margin-bottom:24px;
+    box-shadow:0 10px 40px rgba(34,197,94,.25);
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:16px;
+    font-weight:700;
+}
+
+.description{
+    color:var(--text-secondary);
+    line-height:1.7;
+    margin-bottom:40px;
+    font-size:1.1rem;
+}
+
+.download-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--green);
+    color:white;
+    padding:15px 36px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.download-btn:hover{
+    background:var(--green-hover);
+    transform:translateY(-2px);
+}
+
+.version{
+    margin-top:18px;
+    color:var(--text-secondary);
+    font-size:.9rem;
+}
+
+.github{
+    margin-top:40px;
+}
+
+.github a{
+    color:var(--green);
+    text-decoration:none;
+}
+
+.github a:hover{
+    text-decoration:underline;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:24px;
+    padding:48px;
+}
+</style>
 </head>
-<body class="text-slate-300 min-h-screen flex flex-col justify-between selection:bg-blue-500/30">
+<body>
 
-    <main class="max-w-xl mx-auto px-6 py-20 flex-grow flex flex-col items-center justify-center text-center">
+<div class="container">
 
-        <div class="mb-8 relative group">
-            <div class="absolute inset-0 bg-blue-500/20 rounded-3xl blur-2xl group-hover:bg-blue-500/30 transition-all duration-500 transform group-hover:scale-105"></div>
-            <img src="gamescope helper.png"
-                 alt="Gamescope Helper Icon"
-                 class="relative w-32 h-32 rounded-3xl shadow-2xl border border-slate-800/50 transition-transform duration-300 group-hover:scale-[1.02]">
-        </div>
+    <div class="card">
 
-        <h1 class="text-3xl font-800 tracking-tighter text-white mb-3">
-            GAMESCOPE_<span class="text-blue-400 font-400">HELPER</span>
-        </h1>
+        <img src="gamescope helper.png"
+             alt="Gamescope Helper"
+             class="logo">
 
-        <p class="text-sm text-slate-400 max-w-sm mb-12 leading-relaxed tracking-tight">
-            Configure suas opções de inicialização do Gamescope para os jogos da Steam sem complicação e direto pela interface gráfica.
+        <h1>Gamescope Helper</h1>
+
+        <p class="description">
+            Interface gráfica para configurar o Gamescope de forma simples,
+            rápida e intuitiva. Sem precisar decorar parâmetros ou editar
+            comandos manualmente.
         </p>
 
-        <div class="w-full flex flex-col items-center gap-4">
-            <a href="https://github.com/WillianBr08/Gamescope-Helper/releases/download/0.1.0beta/Gamescope_Helper-x86_64.AppImage"
-               class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-600/15 hover:shadow-blue-500/25 transition-all duration-200 flex items-center justify-center gap-3 text-sm tracking-wide border border-blue-400/20">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                BAIXAR APPIMAGE
-            </a>
+        <a class="download-btn"
+           href="https://github.com/WillianBr08/Gamescope-Helper/releases/download/0.2.0beta/gamescopehelper.AppImage">
+            Download AppImage
+        </a>
 
-            <div class="inline-flex items-center gap-2 bg-slate-900/90 border border-slate-800/80 px-4 py-2 rounded-xl text-[11px] text-slate-400 font-medium">
-                <span class="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                Format: .AppImage (Só baixar e rodar)
-            </div>
+        <div class="version">
+            Version 0.2.0 Beta
         </div>
 
-    </main>
+        <div class="github">
+            <a href="https://github.com/WillianBr08/Gamescope-Helper">
+                GitHub Repository
+            </a>
+        </div>
 
-    <footer class="py-8 text-center text-[11px] text-slate-600 border-t border-slate-900/40 tracking-wider">
-        <p>DEVS: <a href="https://github.com/WillianBr08" class="hover:text-slate-400 transition-colors">@WillianBr08</a></p>
-    </footer>
+    </div>
+
+</div>
 
 </body>
 </html>

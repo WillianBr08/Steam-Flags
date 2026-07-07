@@ -1,37 +1,126 @@
-# Gamescope Helper
+<p align="center">
+  <img src="SteamFlags.png" width="100" alt="Steam Flags">
+</p>
 
-<a href="https://github.com/WillianBr08/Gamescope-Helper/releases">
-  <img src="https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge&logo=github" alt="Download Releases">
-</a>
+<h1 align="center">Steam Flags</h1>
 
----
+<p align="center">
+  Configure opcoes de lancamento do Steam para Linux.<br>
+  Configure Steam launch options for Linux gaming.
+</p>
 
-## 🇺🇸 English Description
-
-Gamescope Helper (GS Helper) is a lightweight utility built with PyQt6 designed to streamline the management of custom environment variables, launch arguments, and performance tweaks for Steam games on Linux.
-
-### Features
-
-* **Gamescope Integration:** Easily configure and optimize Gamescope sessions for your games.
-* **Wine Overrides Management (`WINEDLLOVERRIDES`):** Configure and inject custom DLL overrides (native/builtin) directly through the interface, simplifying the setup for mods, custom wrappers, and third-party tools.
-* **Advanced Environment Variables Support:** Dedicated fields to quickly set and inject critical variables, such as custom paths via `LD_PRELOAD` and quick toggles for post-processing tools like VkBasalt (`ENABLE_VKBASALT=1`).
-
-### New in Version 0.2.1beta
-
-This update expands the core functionality of Gamescope Helper to give you deeper control over your gaming environment variables and launch arguments, allowing for quick modding setups and advanced performance optimizations without manually editing desktop entries or Steam launch options.
+<p align="center">
+  <code>Gamescope · FSR · NIS · Gamemode · Multi-idioma</code>
+</p>
 
 ---
 
-## 🇧🇷 Descrição em Português
+## Instalacao
 
-O Gamescope Helper (GS Helper) é uma utilidade leve feita em PyQt6 desenvolvida para simplificar o gerenciamento de variáveis de ambiente personalizadas, argumentos de inicialização e ajustes de desempenho para jogos da Steam no Linux.
+```bash
+curl -fsSL https://raw.githubusercontent.com/WillianBr08/Gamescope-Helper/main/install.sh | bash
+```
 
-### Funcionalidades
+Ou baixe o AppImage manualmente em [Releases](https://github.com/WillianBr08/Gamescope-Helper/releases).
 
-* **Integração com o Gamescope:** Configure e otimize facilmente sessões do Gamescope para os seus jogos.
-* **Gerenciamento de Overrides do Wine (`WINEDLLOVERRIDES`):** Configure e injete substituições de DLLs personalizadas (nativas/embutidas) direto pela interface, simplificando a instalação de mods, wrappers customizados e ferramentas de terceiros.
-* **Suporte Avançado a Variáveis de Ambiente:** Campos dedicados para definir e injetar rapidamente variáveis críticas, como caminhos customizados via `LD_PRELOAD` e ativação rápida para ferramentas de pós-processamento como o VkBasalt (`ENABLE_VKBASALT=1`).
+## Como usar
 
-### Novidades na Versão 0.2.1beta
+1. Abra o Steam Flags
+2. Configure as opcoes de Gamescope como preferir
+3. Copie o comando gerado
+4. Cole nas opcoes de inicializacao do jogo no Steam
 
-Esta atualização expande as funcionalidades principais do Gamescope Helper para te dar maior controle sobre as variáveis de ambiente e argumentos de inicialização dos seus jogos, permitindo configurações rápidas de mods e otimizações avançadas de desempenho sem precisar editar manualmente arquivos de desktop ou as opções de inicialização da Steam.
+```
+gamemoderun gamescope -w 1280 -h 720 -W 1920 -H 1080 -r 60 -F fsr --sharpness 8 -f -- %command%
+```
+
+## Features
+
+- Resolucao dupla (jogo + saida)
+- Upscaling com FSR e NIS
+- Sharpness ajustavel
+- Modo de tela: janela, fullscreen, borderless
+- Gamemode automatico
+- Variaveis de ambiente (LD_PRELOAD, AMD Anti-Lag, VKBasalt)
+- Preview do comando em tempo real
+- Copiar com um clique
+- Multi-idioma (Portugues, Ingles, Sistema)
+- Temas (System, Light, Dark, Palestra)
+
+## Rodar do codigo fonte
+
+```bash
+pip install PyGObject
+sudo apt install libgtk-4-dev libadwaita-1-dev
+glib-compile-schemas schemas/
+GSETTINGS_SCHEMA_DIR=schemas python3 steam_flags.py
+```
+
+## Building
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed steam_flags.py
+```
+
+---
+
+<p align="center">
+  <sub>Steam Flags v0.3.0 · Open Source · Linux</sub>
+</p>
+
+---
+
+## Installation
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/WillianBr08/Gamescope-Helper/main/install.sh | bash
+```
+
+Or download the AppImage manually from [Releases](https://github.com/WillianBr08/Gamescope-Helper/releases).
+
+## How to use
+
+1. Open Steam Flags
+2. Configure your Gamescope settings
+3. Copy the generated command
+4. Paste it into Steam's launch options for your game
+
+```
+gamemoderun gamescope -w 1280 -h 720 -W 1920 -H 1080 -r 60 -F fsr --sharpness 8 -f -- %command%
+```
+
+## Features
+
+- Dual resolution (game + output)
+- FSR and NIS upscaling
+- Adjustable sharpness
+- Display modes: windowed, fullscreen, borderless
+- Automatic Gamemode
+- Environment variables (LD_PRELOAD, AMD Anti-Lag, VKBasalt)
+- Real-time command preview
+- One-click copy
+- Multi-language (Portuguese, English, System)
+- Themes (System, Light, Dark, Palestra)
+
+## Run from source
+
+```bash
+pip install PyGObject
+sudo apt install libgtk-4-dev libadwaita-1-dev
+glib-compile-schemas schemas/
+GSETTINGS_SCHEMA_DIR=schemas python3 steam_flags.py
+```
+
+## Building
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed steam_flags.py
+```
+
+---
+
+<p align="center">
+  <sub>Steam Flags v0.3.0 · Open Source · Linux</sub>
+</p>

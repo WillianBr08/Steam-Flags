@@ -18,15 +18,15 @@
 ## Instalacao
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/WillianBr08/Gamescope-Helper/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/WillianBr08/Steam-Flags/main/install.sh | bash
 ```
 
-Ou baixe o AppImage manualmente em [Releases](https://github.com/WillianBr08/Gamescope-Helper/releases).
+Ou baixe o AppImage em [Releases](https://github.com/WillianBr08/Steam-Flags/releases).
 
 ## Como usar
 
 1. Abra o Steam Flags
-2. Configure as opcoes de Gamescope como preferir
+2. Configure as opcoes de Gamescope
 3. Copie o comando gerado
 4. Cole nas opcoes de inicializacao do jogo no Steam
 
@@ -74,10 +74,10 @@ pyinstaller --onefile --windowed steam_flags.py
 ## Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/WillianBr08/Gamescope-Helper/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/WillianBr08/Steam-Flags/main/install.sh | bash
 ```
 
-Or download the AppImage manually from [Releases](https://github.com/WillianBr08/Gamescope-Helper/releases).
+Or download the AppImage from [Releases](https://github.com/WillianBr08/Steam-Flags/releases).
 
 ## How to use
 

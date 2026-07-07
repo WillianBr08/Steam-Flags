@@ -2,8 +2,8 @@
 set -e
 
 INSTALL_DIR="$HOME/.local/bin"
-REPO="WillianBr08/Gamescope-Helper"
-APP_NAME="Gamescope_Helper-x86_64.AppImage"
+REPO="WillianBr08/Steam-Flags"
+APP_NAME="Steam_Flags-x86_64.AppImage"
 
 echo "Baixando Steam Flags..."
 mkdir -p "$INSTALL_DIR"

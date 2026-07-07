@@ -40,12 +40,12 @@ gamemoderun gamescope -w 1280 -h 720 -W 1920 -H 1080 -r 60 -F fsr --sharpness 8 
 - Upscaling com FSR e NIS
 - Sharpness ajustavel
 - Modo de tela: janela, fullscreen, borderless
-- Gamemode automatico
+- Feral Gamemode
 - Variaveis de ambiente (LD_PRELOAD, AMD Anti-Lag, VKBasalt)
 - Preview do comando em tempo real
 - Copiar com um clique
 - Multi-idioma (Portugues, Ingles, Sistema)
-- Temas (System, Light, Dark, Palestra)
+- Temas (System, Light, Dark)
 
 ## Rodar do codigo fonte
 
@@ -63,7 +63,6 @@ pip install pyinstaller
 pyinstaller --onefile --windowed steam_flags.py
 ```
 
----
 
 <p align="center">
   <sub>Steam Flags v0.3.0 · Open Source · Linux</sub>
@@ -96,12 +95,12 @@ gamemoderun gamescope -w 1280 -h 720 -W 1920 -H 1080 -r 60 -F fsr --sharpness 8 
 - FSR and NIS upscaling
 - Adjustable sharpness
 - Display modes: windowed, fullscreen, borderless
-- Automatic Gamemode
+- Feral Gamemode
 - Environment variables (LD_PRELOAD, AMD Anti-Lag, VKBasalt)
 - Real-time command preview
 - One-click copy
 - Multi-language (Portuguese, English, System)
-- Themes (System, Light, Dark, Palestra)
+- Themes (System, Light, Dark)
 
 ## Run from source
 
@@ -119,7 +118,6 @@ pip install pyinstaller
 pyinstaller --onefile --windowed steam_flags.py
 ```
 
----
 
 <p align="center">
   <sub>Steam Flags v0.3.0 · Open Source · Linux</sub>
